@@ -3,6 +3,8 @@ import antfu from "@antfu/eslint-config";
 
 import withNuxt from "./.nuxt/eslint.config.mjs";
 
+// TODO: add support for tailwind v4
+
 export default withNuxt(antfu({
   type: "app",
   vue: true,
