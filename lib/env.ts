@@ -2,6 +2,8 @@ import { z } from "zod";
 
 const EnvSchema = z.object({
   NODE_ENV: z.string(),
+  TURSO_DATABASE_URL: z.string(),
+  TURSO_AUTH_TOKEN: z.string(),
 //   BABANANA: z.string(),
 });
 

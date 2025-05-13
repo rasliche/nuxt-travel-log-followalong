@@ -15,6 +15,7 @@ export default withNuxt(antfu({
     semi: true,
     quotes: "double",
   },
+  ignores: ["package-lock.json", "**/migrations*"],
 }, {
   rules: {
     "ts/no-redeclare": "off",
