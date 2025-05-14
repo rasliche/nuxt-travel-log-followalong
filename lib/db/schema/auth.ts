@@ -1,7 +1,6 @@
 import { int, integer, sqliteTable, text } from "drizzle-orm/sqlite-core";
 
 export const user = sqliteTable("user", {
-//   id: text("id").primaryKey(), GENERATED
   id: int().primaryKey({ autoIncrement: true }),
   name: text("name").notNull(),
   email: text("email").notNull().unique(),
@@ -13,7 +12,7 @@ export const user = sqliteTable("user", {
 
 export const session = sqliteTable("session", {
   id: int().primaryKey({ autoIncrement: true }),
-  expiresAt: integer("expires_at", { mode: "timestamp" }).notNull(),
+  expiresAt: integer().notNull(),
   token: text("token").notNull().unique(),
   createdAt: integer().notNull(),
   updatedAt: integer().notNull(),
@@ -30,8 +29,8 @@ export const account = sqliteTable("account", {
   accessToken: text("access_token"),
   refreshToken: text("refresh_token"),
   idToken: text("id_token"),
-  accessTokenExpiresAt: integer("access_token_expires_at", { mode: "timestamp" }),
-  refreshTokenExpiresAt: integer("refresh_token_expires_at", { mode: "timestamp" }),
+  accessTokenExpiresAt: integer(),
+  refreshTokenExpiresAt: integer(),
   scope: text("scope"),
   password: text("password"),
   createdAt: integer().notNull(),
@@ -42,7 +41,7 @@ export const verification = sqliteTable("verification", {
   id: int().primaryKey({ autoIncrement: true }),
   identifier: text("identifier").notNull(),
   value: text("value").notNull(),
-  expiresAt: integer("expires_at", { mode: "timestamp" }).notNull(),
+  expiresAt: integer().notNull(),
   createdAt: integer(),
   updatedAt: integer(),
 });
