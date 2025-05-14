@@ -8,7 +8,9 @@ export const auth = betterAuth({
   database: drizzleAdapter(db, {
     provider: "sqlite", // or "mysql", "pg"
   }),
-  advanced: {
+  // this option is nested one level deeper than in
+  // CJ's original youtube video project example
+  advanced: { // the advanced option is new
     database: {
       generateId: false,
     },
