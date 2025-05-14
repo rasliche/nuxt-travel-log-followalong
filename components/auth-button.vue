@@ -10,11 +10,14 @@ async function signIn() {
     provider: "github",
     callbackURL: "/dashboard",
   });
+  loading.value = false;
 }
 </script>
 
 <template>
   <button :disabled="loading" class="btn btn-accent" @click="signIn">
-    Sign In With Github <Icon name="tabler:brand-github" size="24" />
+    Sign In With Github
+    <span v-if="loading" class="loading loading-spinner loading-md" />
+    <Icon v-else name="tabler:brand-github" size="24" />
   </button>
 </template>
