@@ -8,6 +8,20 @@
       "when": 1747160927110,
       "tag": "0000_faithful_bulldozer",
       "breakpoints": true
+    },
+    {
+      "idx": 1,
+      "version": "6",
+      "when": 1747223502553,
+      "tag": "0001_right_cobalt_man",
+      "breakpoints": true
+    },
+    {
+      "idx": 2,
+      "version": "6",
+      "when": 1747223763227,
+      "tag": "0002_goofy_ego",
+      "breakpoints": true
     }
   ]
 }
