@@ -1,17 +1,7 @@
 <script lang="ts" setup>
-import { createAuthClient } from "better-auth/client";
+import { useAuthStore } from "~/store/auth";
 
-const authClient = createAuthClient();
-const loading = ref(false);
-
-async function signIn() {
-  loading.value = true;
-  await authClient.signIn.social({
-    provider: "github",
-    callbackURL: "/dashboard",
-  });
-  loading.value = false;
-}
+const { loading, signIn } = useAuthStore();
 </script>
 
 <template>

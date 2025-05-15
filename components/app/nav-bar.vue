@@ -5,9 +5,9 @@ import AuthButton from "../auth-button.vue";
 <template>
   <div class="navbar bg-primary text-primary-content">
     <div class="navbar-start">
-      <button to="/" class="btn btn-ghost text-xl">
+      <NuxtLink to="/" class="btn btn-ghost text-xl">
         Travel Log
-      </button>
+      </NuxtLink>
     </div>
     <div class="navbar-end">
       <AppThemeToggle />
