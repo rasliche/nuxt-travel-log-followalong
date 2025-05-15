@@ -5,6 +5,7 @@ const authClient = createAuthClient();
 export const useAuthStore = defineStore("useAuthStore", () => {
   const loading = ref(false);
   async function signIn() {
+    console.log("login attempted");
     loading.value = true;
     await authClient.signIn.social({
       provider: "github",
